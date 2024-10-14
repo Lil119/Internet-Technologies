@@ -1,6 +1,6 @@
 ---
 title: ABOUT PAGE
-layout: template
+layout: post
 filename: code_example.md
 --- 
 
