@@ -2,3 +2,13 @@ name: Tutorial on Next.js
 remote_theme: sighingnow/jekyll-gitbook
 toc:
     enabled: true
+collections:
+  pages:
+    output: true
+    permalink: /:collection/:path/
+  others:
+    output: true
+    permalink: /:collection/:path/
+
+ordered_collections:
+  - pages
