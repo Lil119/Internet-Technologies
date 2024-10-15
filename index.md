@@ -1,7 +1,10 @@
-# Tutorial on how to install Next.js
+---
+title: Tutorial on Next.js
+layout: post
+filename: index.md
+--- 
+
+# Introduction
 
 ex
 
-# Tutorial on a simple code
-
-ex

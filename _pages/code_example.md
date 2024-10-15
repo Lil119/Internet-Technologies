@@ -1,5 +1,5 @@
 ---
-title: ABOUT PAGE
+title: Basic code example
 layout: post
 filename: code_example.md
 --- 
