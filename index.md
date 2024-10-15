@@ -4,7 +4,5 @@ layout: post
 filename: index.md
 --- 
 
-# Introduction
-
-ex
+Select a topic on the left side to get started with Next.js !
 
