@@ -4,5 +4,7 @@ layout: post
 filename: index.md
 --- 
 
+![Next.js Logo](/images/next-js-logo.svg "Next.js Logo").
+
 Select a topic on the left side to get started with Next.js !
 
