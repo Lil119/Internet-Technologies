@@ -50,6 +50,7 @@ First, you will need to run the command "npx create-next-app@latest" in the term
 
 Then, Next will ask you several questions before installing. Name your project "next-demo" and answer as the following :
 ![](/docs/assets/images/questions-asked.png)
+Tailwind CSS is a CSS framework that is often used with Next.js.
 
 Once the installation is complete, the file tree will look like this :
 ![](/docs/assets/images/file-tree-next.png)

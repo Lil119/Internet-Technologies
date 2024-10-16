@@ -1,9 +1,15 @@
 ---
-title: Basic code example
+title: Basic code examples
 layout: post
 filename: code_example.md
 --- 
 
-# Tutorial on a simple code
+## Introduction
 
-this is an example of code.
+In this tutorial, we will assume that you have basic knowledge of HTML, CSS, Typescript and React in order to focus ont the specificities of Next.js.
+
+https://nextjs.org/learn/dashboard-app/
+
+## Using Tailwind CSS
+
+## Optimazing fonts and images
