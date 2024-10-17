@@ -1,74 +1,75 @@
-# How to start a project on Next.js
+# How to Start a Project with Next.js
 
 ## Introduction
 
-The first part of this tutorial is heavily based on the tutorial of Derek Turner on [how to install React](https://derekturner.github.io/IT-docs-24/#/Block_REACT/section_5/reactDevelopment1?id=dockervite-client-side-app).
+This tutorial is inspired by Derek Turner’s guide on [installing React](https://derekturner.github.io/IT-docs-24/#/Block_REACT/section_5/reactDevelopment1?id=dockervite-client-side-app), covering the initial setup for a Next.js project in a Docker container with Node.js and TypeScript.
 
-## Installing a Docker container with a Node & Typescript environment
+## Setting Up a Docker Container with Node.js & TypeScript
 
-First, you will need to have Node.js installed.
+To get started, ensure you have both **Node.js** and **Docker** installed, as well as the **Dev Containers** extension in **VSCode**.
 
-You will also need to have Docker running and the extension Dev Containers in VSCode.
+1. Create a new folder on your PC called `next-tutorial`, then open it in VSCode.
 
-Create a new folder "next-tutorial" on your PC and open it with VSCode.
+   ![Creating the Folder](/Internet-Technologies/src/assets/images/create-folder.png)
 
-<img src="/Internet-Technologies/src/assets/images/create-folder.png" width="400" height="300" alt="Image description">
+2. Press:
 
-![Creation of the folder](/Internet-Technologies/src/assets/images/create-folder.png)
+   > `CTRL + SHIFT + P`
 
-Then click "CTRL + SHIFT + P" and search for the command "Dev Containers: Open Folder in Container".
+   and search for the command **"Dev Containers: Open Folder in Container"**. Select the newly created folder.
 
-This will open a dialog in which you will choose the new folder created.
+3. When prompted to store the configuration file, choose to store it in the workspace.
 
-VSCode will ask you where to store the configuration file and you can choose to store it in the workspace.
+   ![Storing Configuration File](/Internet-Technologies/src/assets/images/add-config-workspace.png)
 
-![Storing configuration file](/Internet-Technologies/src/assets/images/add-config-workspace.png)
+4. A dialog will appear asking you to select a container type. Search for **"Node & TypeScript"** and select it.
 
-A prompt then appears asking you to select the type of container needed. Search and click on "Node & Typescript."
+   ![Choosing Environment](/Internet-Technologies/src/assets/images/choose-environement.png)
 
-![Choosing envirnoment](/Internet-Technologies/src/assets/images/choose-environement.png)
+5. Choose a Node.js version. For this tutorial, select **LTS version 20-bookworm**.
 
-Then you can choose a Node version. For this tutorial, we will use LTS version 20-bookworm.
+   ![Choosing Node Version](/Internet-Technologies/src/assets/images/choose-node-version.png)
 
-![Choosing node version](/Internet-Technologies/src/assets/images/choose-node-version.png)
+6. You’ll see a couple of prompts with additional options. You can leave these blank and click **OK**.
 
-VSCode will then ask you two questions in which you can select none of the options and press Ok.
+   ![No Option 1](/Internet-Technologies/src/assets/images/no-option-1.png)
 
-![Question with options 1](/Internet-Technologies/src/assets/images/no-option-1.png)
+   ![No Option 2](/Internet-Technologies/src/assets/images/no-option-2.png)
 
+The container will now start creating, and after a short wait, it will be up and running in Docker Desktop.
 
-![Question with options 2](/Internet-Technologies/src/assets/images/no-option-2.png)
-
-The system will finally start to create the container.
-After a while, the container will start running in Docker Desktop.
-
-![](/Internet-Technologies/src/assets/images/docker-container-running.png)
-
-
-
+   ![Docker Container Running](/Internet-Technologies/src/assets/images/docker-container-running.png)
 
 ## Installing Next.js
 
-Now that you have a container running, let's install Next.js.
+With the container running, let’s install Next.js:
 
-First, you will need to run the command "npx create-next-app@latest" in the terminal.
+1. Open the terminal and run:
 
-![Installing Next.js](/Internet-Technologies/src/assets/images/press-y-to-install.png)
+   > `npx create-next-app@latest`
 
-Then, Next will ask you several questions before installing. Name your project "next-demo" and answer as the following :
+   ![Installing Next.js](/Internet-Technologies/src/assets/images/press-y-to-install.png)
 
-![Questions before installing](/Internet-Technologies/src/assets/images/questions-asked.png)
+2. During installation, Next.js will ask you some setup questions. Name your project **next-demo**, and respond to the prompts as shown below:
 
-Tailwind CSS is a CSS framework that is often used with Next.js.
+   ![Questions Before Installing](/Internet-Technologies/src/assets/images/questions-asked.png)
 
-Once the installation is complete, the file tree will look like this :
+3. Tailwind CSS is a popular CSS framework for styling Next.js projects, so consider including it if needed.
 
-![File tree](/Internet-Technologies/src/assets/images/file-tree-next.png)
+4. Once the installation completes, your project directory should look like this:
 
-Then you will need to place yourself in the right folder using "cd next-demo".
+   ![File Tree](/Internet-Technologies/src/assets/images/file-tree-next.png)
 
-Then run "npm run dev".
+5. Navigate into your new project folder:
 
-You can then access the Next.js website at http://localhost:3000/.
+   > `cd next-demo`
 
-![Next.js website example](/Internet-Technologies/src/assets/images/next-website.png)
+6. Start the development server by running:
+
+   > `npm run dev`
+
+7. You can now access your Next.js site at [http://localhost:3000/](http://localhost:3000/).
+
+   ![Next.js Website Example](/Internet-Technologies/src/assets/images/next-website.png)
+
+---
