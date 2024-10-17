@@ -11,7 +11,7 @@ First, you will need to have Node.js installed.
 You will also need to have Docker running and the extension Dev Containers in VSCode.
 
 Create a new folder "next-tutorial" on your PC and open it with VSCode.
-![](/src/assets/images/create-folder.png)
+![](/../Internet-Technologies/src/assets/images/create-folder.png)
 
 Then click "CTRL + SHIFT + P" and search for the command "Dev Containers: Open Folder in Container".
 
