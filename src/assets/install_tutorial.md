@@ -18,17 +18,17 @@ Then click "CTRL + SHIFT + P" and search for the command "Dev Containers: Open F
 This will open a dialog in which you will choose the new folder created.
 
 VSCode will ask you where to store the configuration file and you can choose to store it in the workspace.
-![](/Internet-Technologies/src/assets/images/add-config-workspace.png)
+![Storing configuration file](/Internet-Technologies/src/assets/images/add-config-workspace.png)
 
 A prompt then appears asking you to select the type of container needed. Search and click on "Node & Typescript."
-![](/Internet-Technologies/src/assets/images/choose-environement.png)
+![Choosing envirnoment](/Internet-Technologies/src/assets/images/choose-environement.png)
 
 Then you can choose a Node version. For this tutorial, we will use LTS version 20-bookworm.
-![](/Internet-Technologies/src/assets/images/choose-node-version.png)
+![Choosing node version](/Internet-Technologies/src/assets/images/choose-node-version.png)
 
 VSCode will then ask you two questions in which you can select none of the options and press Ok.
-![](/Internet-Technologies/src/assets/images/no-option-1.png)
-![](/Internet-Technologies/src/assets/images/no-option-2.png)
+![Question with options 1](/Internet-Technologies/src/assets/images/no-option-1.png)
+![Question with options 2](/Internet-Technologies/src/assets/images/no-option-2.png)
 
 The system will finally start to create the container.
 After a while, the container will start running in Docker Desktop.
@@ -42,18 +42,18 @@ After a while, the container will start running in Docker Desktop.
 Now that you have a container running, let's install Next.js.
 
 First, you will need to run the command "npx create-next-app@latest" in the terminal.
-![](/Internet-Technologies/src/assets/images/press-y-to-install.png)
+![Installing Next.js](/Internet-Technologies/src/assets/images/press-y-to-install.png)
 
 Then, Next will ask you several questions before installing. Name your project "next-demo" and answer as the following :
-![](/Internet-Technologies/src/assets/images/questions-asked.png)
+![Questions before installing](/Internet-Technologies/src/assets/images/questions-asked.png)
 Tailwind CSS is a CSS framework that is often used with Next.js.
 
 Once the installation is complete, the file tree will look like this :
-![](/Internet-Technologies/src/assets/images/file-tree-next.png)
+![File tree](/Internet-Technologies/src/assets/images/file-tree-next.png)
 
 Then you will need to place yourself in the right folder using "cd next-demo".
 
 Then run "npm run dev".
 
 You can then access the Next.js website at http://localhost:3000/.
-![](/Internet-Technologies/src/assets/images/next-website.png)
+![Next.js website example](/Internet-Technologies/src/assets/images/next-website.png)
