@@ -11,14 +11,14 @@ First, you will need to have Node.js installed.
 You will also need to have Docker running and the extension Dev Containers in VSCode.
 
 Create a new folder "next-tutorial" on your PC and open it with VSCode.
-![](/../Internet-Technologies/src/assets/images/create-folder.PNG)
+![](/Internet-Technologies/src/assets/images/create-folder.PNG)
 
 Then click "CTRL + SHIFT + P" and search for the command "Dev Containers: Open Folder in Container".
 
 This will open a dialog in which you will choose the new folder created.
 
 VSCode will ask you where to store the configuration file and you can choose to store it in the workspace.
-![](/src/assets/images/add-config-workspace.png)
+![](../src/assets/images/add-config-workspace.png)
 
 A prompt then appears asking you to select the type of container needed. Search and click on "Node & Typescript."
 ![](/src/assets/images/choose-environement.png)
