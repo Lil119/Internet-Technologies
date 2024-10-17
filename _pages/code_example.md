@@ -8,7 +8,6 @@ filename: code_example.md
 
 In this tutorial, we will assume that you have basic knowledge of HTML, CSS, Typescript and React in order to focus ont the specificities of Next.js.
 
-https://nextjs.org/learn/dashboard-app/
 
 ## Using Tailwind CSS
 

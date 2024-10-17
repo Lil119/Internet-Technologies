@@ -1,0 +1,1 @@
+React is one of many frameworks which could be used for web app development, here is a brief introduction to an alternative which is popular with developers.

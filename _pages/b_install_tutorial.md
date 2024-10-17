@@ -43,7 +43,7 @@ After a while, the container will start running in Docker Desktop.
 
 ## Installing Next.js
 
-Now that you have a container running, let's install Next.js on it.
+Now that you have a container running, let's install Next.js.
 
 First, you will need to run the command "npx create-next-app@latest" in the terminal.
 ![](/docs/assets/images/press-y-to-install.png)
