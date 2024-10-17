@@ -1,8 +1,4 @@
----
-title: Basic code examples
-layout: post
-filename: code_example.md
---- 
+# Basic code examples
 
 ## Introduction
 
