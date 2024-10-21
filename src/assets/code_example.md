@@ -108,21 +108,61 @@ You can now access [http://localhost:3000/reviews/1](http://localhost:3000/revie
 
 ![Review 1](/Internet-Technologies/src/assets/images/code_example/review-1.png)
 
+### Example: Having parameters in the URL
+
+You can also pass multiple parameters through the URL.
+
+To demonstrate this, you can update the `DetailsPage` function with the following code:
+
+    ```tsx
+    "use client";
+
+    import { useSearchParams } from 'next/navigation';
+
+    export default function DetailsPage({ params }: { params: { reviewId: string } }) {
+        const searchParams = useSearchParams();
+    
+        return (
+            <div>
+                <h1>Review ID: {params.reviewId}</h1>
+                <h2>Title: {searchParams.get("title")}</h2>
+                <p>Description: {searchParams.get("description")}</p>
+                <p>Stars: {searchParams.get("stars")}</p>
+            </div>
+        );
+    }
+    ```
+
+In this example, we are using the `useSearchParams` function from Next.js, which is a **Client Component**. Since the page relies on client-side features, it's important to declare that the component will run on the client by including `"use client"` at the top of the file.
+
+The `useSearchParams` function allows you to retrieve query parameters from the URL and use them in your component.
+
+You can test this implementation by navigating to the following URL:
+
+[http://localhost:3000/reviews/1?title=Great%20Product&description=This%20product%20was%20fantastic!&stars=5](http://localhost:3000/reviews/1?title=Great%20Product&description=This%20product%20was%20fantastic!&stars=5)
+
+This will render the following:
+
+![Review Details](/Internet-Technologies/src/assets/images/code_example/review-details.png)
+
+In this example:
+- The **Review ID** is retrieved from the URL path.
+- The **Title**, **Description**, and **Stars** are extracted from the query parameters.
+
 
 
 ## Simplified API gestion
 
-Next.js allows to write fullstack applications with React. It adds tools to code API easily.
+Next.js enables you to build fullstack applications with React, providing tools to easily create APIs.
 
-### Example : Create an API for our reviews
+### Example: Create an API for Reviews
 
-1. Create a folder api inside the app folder
-   
-2. Create another folder api/reviews
-   
-3. Create a file route.tsx inside reviews
-   
-4. Add this code inside the file :
+To create an API endpoint for handling reviews, follow these steps:
+
+1. Inside the `app` folder, create a new folder named `api`.
+2. Within the `api` folder, create another folder named `reviews`.
+3. In the `reviews` folder, create a file named `route.tsx`.
+4. Add the following code to `route.tsx`:
 
     ```tsx
     import { NextResponse } from 'next/server';
@@ -130,40 +170,104 @@ Next.js allows to write fullstack applications with React. It adds tools to code
     export async function GET() {
         return NextResponse.json([
             {
-                title: "Review number 1",
-                description: "this is my good review",
+                id: 1,
+                title: "Positive review",
+                description: "This is my good review",
                 stars: 5
             },
             {
-                title: "Review number 2",
-                description: "this is my bad review",
+                id: 2,
+                title: "Negative review",
+                description: "This is my bad review",
                 stars: 1
             }
         ]);
     }
+    ```
 
-You can access the data by typing "http://localhost:3000/api/reviews" in the browser or by using postman.
+This code defines a simple `GET` endpoint that returns a list of reviews in JSON format. 
+
+You can access the reviews API by visiting the following URL in your browser or using a tool like Postman : [http://localhost:3000/api/reviews](http://localhost:3000/api/reviews) 
+
+This will display the list of reviews as shown below :
 
 ![Api for reviews](/Internet-Technologies/src/assets/images/code_example/api-reviews.png)
 
 ### Example : Access an API
 
-Now that we have an API route, we need to access it in order to show it on our website.
+Now that we have created an API route, the next step is to display the data on our website.
 
-A basic way to retrieve data with React would be to use useEffect and useState. However, we have a more efficient way to do it in Next.js. We are going to use the function useSWR.
-This function allow us to retrieve data from the Client-Side.
+A basic way to retrieve data in React would be to use `useEffect` and `useState`. However, in Next.js, we have a more efficient approach. We'll use the `fetch` function to retrieve data on the Client-Side.
 
-import useSWR from 'swr'
-export default function Home() {
-  const { data } = useSWR('/api/reviews', fetcher)
-  return <h1>{data.title}</h1>
-}
+Let's update the reviews list page to display the reviews from our API:
+
+### Steps:
+
+1. Open the `app/reviews/page.tsx` file.
+2. Replace the existing code with the following:
+
+    ```tsx
+    import Link from "next/link"
+
+    type Review = {
+      id: number;
+      title: string;
+      description: string;
+      stars: number;
+    }
+
+    export default async function Home() {
+      const data = await fetch('http://localhost:3000/api/reviews', { cache: 'no-store' })
+      const reviews: Review[] = await data.json();
+      return (
+        <ul>
+          {reviews.map((review, index) => (
+            <li key={index} style={{
+              backgroundColor: '#f9f9f9',
+              padding: '15px',
+              marginBottom: '10px',
+              borderRadius: '8px',
+              boxShadow: '0px 2px 5px rgba(0, 0, 0, 0.1)'
+            }}>
+              <strong>Title :</strong> {review.title}<br></br>
+              <strong>Description :</strong> {review.description}<br></br>
+              <strong>Stars :</strong> {review.stars}<br></br>
+              <Link href={"/reviews/" + review.id + "?title=" + review.title + "&description=" + review.description + "&stars=" + review.stars} style={{
+                color: '#0070f3',
+                textDecoration: 'underline',
+                fontWeight: 'bold',
+              }}>
+                Details of review {review.id}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )
+    }
+    ```
+We specified a no-store configuration for the cache in the `fetch` function, so the page will retrieve the data every time it is loaded.
+
+Now, you can see the list of reviews by navigating to the following address: [http://localhost:3000/reviews](http://localhost:3000/reviews).
+
+![Better reviews](/Internet-Technologies/src/assets/images/code_example/better-reviews.png)
 
 
-## Better SEO
+We used the Next.js `Link` component instead of the standard HTML `<a>` tag. This is because `Link` enhances user experience by allowing seamless client-side navigation without reloading the page. It's best practice to use the `Link` component throughout your Next.js project for internal navigation.
+
+
+
+
+
+
+## Better SEO by pre-rendering pages
 
 One of the biggest advantages of Next.js is to improve the SEO by loading pages quicker.
 This can be achieved by using two functions Next.js offers : getServerSideProps and getStaticProps.
+
+
+
+
+
 
 
 

@@ -8,3 +8,5 @@ https://nextjstemplates.com/blog/nextjs-routing
 
 https://refine.dev/blog/next-js-api-routes/#how-to-create-api-routes-in-nextjs
 
+https://swr.vercel.app/docs/with-nextjs
+
