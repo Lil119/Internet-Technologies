@@ -11,7 +11,9 @@ Next.js offers several advantages over React, such as:
 
 These benefits make Next.js particularly useful for building blogs, websites, e-commerce platforms, or any other apps that need to be accessible and performant in a web browser.
 
-In this tutorial, we’ll build a simple video game review website to demonstrate the core features of Next.js.
+In this tutorial, we’ll build a simple review website to demonstrate the core features of Next.js.
+
+
 
 ## Simplified routing with folders and files
 
@@ -25,7 +27,7 @@ Next.js also introduces several special files that serve specific purposes:
 - **Loading**: A UI element that appears while data is loading.
 - **Not-Found**: The UI displayed when a page or route is not found.
 - **Error**: Handles specific errors for individual pages.
-- **Global Error**: Manages errors that affect the entire app.
+- **Global-error**: Manages errors that affect the entire app.
 - **Route**: Defines server-side API endpoints.
 - **Template**: A custom layout for specific pages.
 - **Default**: Acts as a fallback UI for routes with multiple matches.
@@ -106,23 +108,64 @@ You can now access [http://localhost:3000/reviews/1](http://localhost:3000/revie
 
 ![Review 1](/Internet-Technologies/src/assets/images/code_example/review-1.png)
 
+
+
 ## Simplified API gestion
 
 Next.js allows to write fullstack applications with React. It adds tools to code API easily.
 
 ### Example : Create an API for our reviews
 
-in api/reviews : 
-export default function handler(req, res) {
-  res.status(200).json({ name: "Review of the game number 1" });
-}
+1. Create a folder api inside the app folder
+   
+2. Create another folder api/reviews
+   
+3. Create a file route.tsx inside reviews
+   
+4. Add this code inside the file :
+
+    ```tsx
+    import { NextResponse } from 'next/server';
+
+    export async function GET() {
+        return NextResponse.json([
+            {
+                title: "Review number 1",
+                description: "this is my good review",
+                stars: 5
+            },
+            {
+                title: "Review number 2",
+                description: "this is my bad review",
+                stars: 1
+            }
+        ]);
+    }
+
+You can access the data by typing "http://localhost:3000/api/reviews" in the browser or by using postman.
+
+![Api for reviews](/Internet-Technologies/src/assets/images/code_example/api-reviews.png)
 
 ### Example : Access an API
+
+Now that we have an API route, we need to access it in order to show it on our website.
+
+A basic way to retrieve data with React would be to use useEffect and useState. However, we have a more efficient way to do it in Next.js. We are going to use the function useSWR.
+This function allow us to retrieve data from the Client-Side.
+
+import useSWR from 'swr'
+export default function Home() {
+  const { data } = useSWR('/api/reviews', fetcher)
+  return <h1>{data.title}</h1>
+}
 
 
 ## Better SEO
 
-### Quicker loading
+One of the biggest advantages of Next.js is to improve the SEO by loading pages quicker.
+This can be achieved by using two functions Next.js offers : getServerSideProps and getStaticProps.
+
+
 
 #### Optimizing fonts and images
 
