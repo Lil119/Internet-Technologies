@@ -15,7 +15,12 @@ In this tutorial, we’ll build a simple review website to demonstrate the core 
 
 
 
+
+
 ## Simplified routing with folders and files
+
+We will use App Router in this tutorial cause it is the most recent and complete router for Next.js. However, you may encounter older tutorials with Page Router. You will recognize them because they have a "pages" folder.
+
 
 ### Basic routes
 
@@ -33,6 +38,8 @@ Next.js also introduces several special files that serve specific purposes:
 - **Default**: Acts as a fallback UI for routes with multiple matches.
 
 By simply naming a `.tsx` file with one of these predefined names, Next.js automatically assigns its role. This eliminates the need for React Router, simplifying the overall development process.
+
+
 
 ### Example: Creating a New Route
 
@@ -63,6 +70,8 @@ Now, you can run your application with the command:
 Then, open [http://localhost:3000/about](http://localhost:3000/about) in your browser to view the `About Us` page.
 
 ![Content of about page](/Internet-Technologies/src/assets/images/code_example/about-page.png)
+
+
 
 ### Example: Creating a dynamic route
 
@@ -108,7 +117,9 @@ You can now access [http://localhost:3000/reviews/1](http://localhost:3000/revie
 
 ![Review 1](/Internet-Technologies/src/assets/images/code_example/review-1.png)
 
-### Example: Having parameters in the URL
+
+
+### Example: Having parameters in the URL with **useSearchParams**
 
 You can also pass multiple parameters through the URL.
 
@@ -133,7 +144,7 @@ To demonstrate this, you can update the `DetailsPage` function with the followin
     }
     ```
 
-In this example, we are using the `useSearchParams` function from Next.js, which is a **Client Component**. Since the page relies on client-side features, it's important to declare that the component will run on the client by including `"use client"` at the top of the file.
+In this example, we are using the `useSearchParams` function from Next.js, which is a **Client Component**. Since the page relies on client-side features, it's important to declare that the component will run on the client by including `"use client"` at the top of the file. You need to specify it because all component in the app folder are rendered server side by default.
 
 The `useSearchParams` function allows you to retrieve query parameters from the URL and use them in your component.
 
@@ -197,11 +208,9 @@ This will display the list of reviews as shown below :
 
 Now that we have created an API route, the next step is to display the data on our website.
 
-A basic way to retrieve data in React would be to use `useEffect` and `useState`. However, in Next.js, we have a more efficient approach. We'll use the `fetch` function to retrieve data on the Client-Side.
+A basic way to retrieve data in React would be to use `useEffect` and `useState`. However, in Next.js, we have a more efficient approach. We'll use the `fetch` function to retrieve data.
 
 Let's update the reviews list page to display the reviews from our API:
-
-### Steps:
 
 1. Open the `app/reviews/page.tsx` file.
 2. Replace the existing code with the following:
@@ -216,8 +225,8 @@ Let's update the reviews list page to display the reviews from our API:
       stars: number;
     }
 
-    export default async function Home() {
-      const data = await fetch('http://localhost:3000/api/reviews', { cache: 'no-store' })
+    export default async function ReviewPage() {
+      const data = await fetch('http://localhost:3000/api/reviews')
       const reviews: Review[] = await data.json();
       return (
         <ul>
@@ -245,7 +254,6 @@ Let's update the reviews list page to display the reviews from our API:
       )
     }
     ```
-We specified a no-store configuration for the cache in the `fetch` function, so the page will retrieve the data every time it is loaded.
 
 Now, you can see the list of reviews by navigating to the following address: [http://localhost:3000/reviews](http://localhost:3000/reviews).
 
@@ -254,18 +262,102 @@ Now, you can see the list of reviews by navigating to the following address: [ht
 
 We used the Next.js `Link` component instead of the standard HTML `<a>` tag. This is because `Link` enhances user experience by allowing seamless client-side navigation without reloading the page. It's best practice to use the `Link` component throughout your Next.js project for internal navigation.
 
+You can click on the link to see the details page of each review.
+
+
+
+
+### Fetching Data in Next.js App Router
+
+But let's analyse more our `fetch` component, cause it is way more complex than it looks.
+
+There are two primary ways to fetch data in the **App Router**:
+
+1. **Static Rendering (Static API):** Data fetched during build time using `fetch` with caching.
+2. **Dynamic Rendering (Dynamic API):** Data fetched at runtime using dynamic `fetch`.
+
+#### Static Rendering with Static API (Using Cache)
+
+In the **App Router**, components are server-side by default and can directly fetch data. To fetch data from a **static API** (an API where data does not change often), you use the `fetch` method with cache control. The default behavior of `fetch` in server components is to cache the result, making it static and suitable for **Static Site Generation (SSG)**.
+
+In the code used for fetching our reviews, our data is fetched statically. 
+This means the page will be **statically generated**, and the data will only be fetched once during the build.
+
+You can test this by modifying the content of the API and relaunching the server.
+
+In app/api/reviewsroute.tsx :
+
+```tsx
+import { NextResponse } from 'next/server';
+
+export async function GET() {
+    return NextResponse.json([
+        {
+            id: 1,
+            title: "Changed review",
+            description: "this is a changed review",
+            stars: 3
+        },
+        {
+            id: 2,
+            title: "Negative review",
+            description: "this is my bad review",
+            stars: 1
+        }
+    ]);
+}
+```
+
+ If you go back to [http://localhost:3000/reviews](http://localhost:3000/reviews), you will noticed the data has not been updated on the page.
 
 
 
 
 
-## Better SEO by pre-rendering pages
 
-One of the biggest advantages of Next.js is to improve the SEO by loading pages quicker.
-This can be achieved by using two functions Next.js offers : getServerSideProps and getStaticProps.
+#### Dynamic Rendering with Dynamic API (No Cache)
+
+For **dynamic APIs** (where data changes frequently or needs to be fetched on every request), you can explicitly disable caching in the `fetch` call. This ensures that the data is fetched at runtime on each request.
+
+Example (Dynamic Fetch without Cache):
+
+```tsx
+  const data = await fetch('http://localhost:3000/api/reviews', {
+    cache: 'no-store', 
+  })
+```
+
+In this example, the `cache: 'no-store'` option forces the `fetch` request to be **dynamic**, meaning that data is fetched on **every request**.  
+This is useful when the API data is frequently updated.
+
+If you test this code in app/reviews/page.tsx, you will now see the data you modified at [http://localhost:3000/reviews](http://localhost:3000/reviews).
+
+![Changed review](/Internet-Technologies/src/assets/images/code_example/changed-review.png)
+
+
+## Key Differences Between Static and Dynamic API Fetching in App Router
+
+| **Feature**                    | **Static API (SSG)**                                              | **Dynamic API (SSR)**                                                  |
+| ------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| **When Data is Fetched**       | During build time (or with revalidation)                          | On every request                                                       |
+| **Cache Behavior**             | Cached by default (can be revalidated)                            | No caching (`cache: 'no-store'`)                                       |
+| **Fetch Method in App Router** | `fetch('api-url', { next: { revalidate: X } })`                   | `fetch('api-url', { cache: 'no-store' })`                              |
+| **Use Case**                   | Static data that rarely changes (e.g., blog posts, product pages) | Dynamic data that changes frequently (e.g., user dashboard, live data) |
+| **Performance**                | Faster, since pre-rendered at build time                          | Slightly slower, since data is fetched on each request                 |
 
 
 
+## Revalidation (ISR) in App Router
+
+If you want to fetch data statically but also periodically revalidate it, you can use **ISR (Incremental Static Regeneration)** in the **App Router**. This allows pages to be regenerated in the background based on a time interval without rebuilding the entire site.
+
+```tsx
+  const data = await fetch('http://localhost:3000/api/reviews', {
+    next: { revalidate: 60 },
+  })
+```
+
+With this setup, the data will be cached and updated every 60 seconds when a new request comes in, ensuring up-to-date content without fetching on every request.
 
 
 
