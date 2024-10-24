@@ -82,4 +82,6 @@ With the container running, let’s install Next.js:
 
    ![Next.js Website Example](/Internet-Technologies/src/assets/images/next-website.png)
 
+
+If you need to stop the server, use CTRL-C.
 ---

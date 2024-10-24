@@ -11,7 +11,7 @@ Next.js offers several advantages over React, such as:
 
 These benefits make Next.js particularly useful for building blogs, websites, e-commerce platforms, or any other apps that need to be accessible and performant in a web browser.
 
-In this tutorial, we’ll build a simple review website to demonstrate the core features of Next.js.
+In this tutorial, we’ll build a simple review website to demonstrate some core features of Next.js.
 
 
 
@@ -19,7 +19,7 @@ In this tutorial, we’ll build a simple review website to demonstrate the core 
 
 ## Simplified routing with folders and files
 
-We will use App Router in this tutorial cause it is the most recent and complete router for Next.js. However, you may encounter older tutorials with Page Router. You will recognize them because they have a "pages" folder.
+In this tutorial, we will use the App Router because it is the most recent and complete router for Next.js. It offers more features and improvements compared to the older Page Router. However, you might come across older tutorials that still use the Page Router. You can easily recognize them because they have a "pages" folder in their project structure. The App Router, on the other hand, uses an "app" folder to manage routes in a more organized and modern way.
 
 
 ### Basic routes
@@ -27,18 +27,17 @@ We will use App Router in this tutorial cause it is the most recent and complete
 In Next.js, routing is simplified using folders and files to structure your app. Each folder corresponds to a route on your website, and files contain the code for your components.
 
 Next.js also introduces several special files that serve specific purposes:
-- **Layout**: Shared UI components that are reused across multiple pages.
-- **Page**: Defines the content and UI for an individual page.
-- **Loading**: A UI element that appears while data is loading.
-- **Not-Found**: The UI displayed when a page or route is not found.
-- **Error**: Handles specific errors for individual pages.
-- **Global-error**: Manages errors that affect the entire app.
-- **Route**: Defines server-side API endpoints.
-- **Template**: A custom layout for specific pages.
-- **Default**: Acts as a fallback UI for routes with multiple matches.
+- **layout**: Shared UI components that are reused across multiple pages.
+- **page**: Defines the content and UI for an individual page.
+- **loading**: A UI element that appears while data is loading.
+- **not-Found**: The UI displayed when a page or route is not found.
+- **error**: Handles specific errors for individual pages.
+- **global-error**: Manages errors that affect the entire app.
+- **route**: Defines server-side API endpoints.
+- **template**: A custom layout for specific pages.
+- **default**: Acts as a fallback UI for routes with multiple matches.
 
 By simply naming a `.tsx` file with one of these predefined names, Next.js automatically assigns its role. This eliminates the need for React Router, simplifying the overall development process.
-
 
 
 ### Example: Creating a New Route
@@ -64,7 +63,7 @@ After following these steps, your project structure should look like this:
 
 ![File tree](/Internet-Technologies/src/assets/images/code_example/file-structure-routing.png)
 
-Now, you can run your application with the command:
+Now, you can run your application with the command :
 > `npm run dev`
 
 Then, open [http://localhost:3000/about](http://localhost:3000/about) in your browser to view the `About Us` page.
@@ -75,7 +74,7 @@ Then, open [http://localhost:3000/about](http://localhost:3000/about) in your br
 
 ### Example: Creating a dynamic route
 
-Next.js makes it easy to create dynamic routes using bracket notation for folder and file names. Let’s create pages for different game reviews.
+Next.js makes it easy to create dynamic routes using bracket notation for folder and file names. Let’s create pages for different reviews.
 
 1. In the `app` folder, create a new folder named `reviews`. This will represent the `/reviews` route.
 
@@ -95,7 +94,7 @@ Next.js makes it easy to create dynamic routes using bracket notation for folder
        );
    }
    
-Now, you can see the list of review on [http://localhost:3000/reviews](http://localhost:3000/reviews).
+Now, if you relaunch the app, you can see the list of review on [http://localhost:3000/reviews](http://localhost:3000/reviews).
 
 ![List of reviews](/Internet-Technologies/src/assets/images/code_example/review-list.png)
 
@@ -112,10 +111,14 @@ Now, you can see the list of review on [http://localhost:3000/reviews](http://lo
        );
    }
 
+This code allows you to personalize each page with the review id used in the route.
 
 You can now access [http://localhost:3000/reviews/1](http://localhost:3000/reviews/1) and you will see "Review 1" on the page.
 
 ![Review 1](/Internet-Technologies/src/assets/images/code_example/review-1.png)
+
+If you access [http://localhost:3000/reviews/2](http://localhost:3000/reviews/2), it will show "Review 2".
+
 
 
 
@@ -125,7 +128,8 @@ You can also pass multiple parameters through the URL.
 
 To demonstrate this, you can update the `DetailsPage` function with the following code:
 
-    ```tsx
+
+   ```tsx
     "use client";
 
     import { useSearchParams } from 'next/navigation';
@@ -142,7 +146,8 @@ To demonstrate this, you can update the `DetailsPage` function with the followin
             </div>
         );
     }
-    ```
+   ```
+
 
 In this example, we are using the `useSearchParams` function from Next.js, which is a **Client Component**. Since the page relies on client-side features, it's important to declare that the component will run on the client by including `"use client"` at the top of the file. You need to specify it because all component in the app folder are rendered server side by default.
 
@@ -361,7 +366,7 @@ With this setup, the data will be cached and updated every 60 seconds when a new
 
 
 
-### Optimizing images
+## Optimizing images
 
 Next.js optimizes images through its built-in `next/image` component, which provides several automatic optimizations:
 
@@ -369,6 +374,33 @@ Next.js optimizes images through its built-in `next/image` component, which prov
 - **Lazy Loading**: Loads images only when they are about to enter the viewport.
 - **Image Compression**: Compresses images without quality loss to reduce file sizes.
 
+Let's try to show a star image on our home page that will link to the list of reviews.
+
+1. Add a star.png image to a folder next-demo/assets that you can create
+2. Add this code to your app/page.tsx file :
+
+```tsx
+import Image from 'next/image';
+import Link from "next/link"
+import star from '../assets/star.png'
+
+export default async function Home() {
+  return (
+    <Link href="/reviews" passHref>
+      <Image
+        src={star}
+        alt="Star"
+        width={360}
+        height={360}
+      />
+    </Link>
+  )
+}
+```
+
+You can check the results at [http://localhost:3000](http://localhost:3000).
+
+If you click on the star image, you will be redirected to the list of reviews pages.
 
 
-## Using Tailwind CSS
+## Conclusion
