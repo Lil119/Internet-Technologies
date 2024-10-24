@@ -335,7 +335,7 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 ![Changed review](/Internet-Technologies/src/assets/images/code_example/changed-review.png)
 
 
-## Key Differences Between Static and Dynamic API Fetching in App Router
+#### Key Differences Between Static and Dynamic API Fetching in App Router
 
 | **Feature**                    | **Static API (SSG)**                                              | **Dynamic API (SSR)**                                                  |
 | ------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -347,7 +347,7 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 
 
 
-## Revalidation (ISR) in App Router
+#### Revalidation (ISR) in App Router
 
 If you want to fetch data statically but also periodically revalidate it, you can use **ISR (Incremental Static Regeneration)** in the **App Router**. This allows pages to be regenerated in the background based on a time interval without rebuilding the entire site.
 
@@ -363,7 +363,7 @@ With this setup, the data will be cached and updated every 60 seconds when a new
 
 
 
-#### Optimizing fonts and images
+### Optimizing fonts and images
 
 
 
