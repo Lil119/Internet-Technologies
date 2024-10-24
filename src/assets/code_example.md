@@ -361,10 +361,13 @@ With this setup, the data will be cached and updated every 60 seconds when a new
 
 
 
+### Optimizing images
 
+Next.js optimizes images through its built-in `next/image` component, which provides several automatic optimizations:
 
-### Optimizing fonts and images
-
+- **Responsive Images**: Automatically resizes and serves the right image for different devices.
+- **Lazy Loading**: Loads images only when they are about to enter the viewport.
+- **Image Compression**: Compresses images without quality loss to reduce file sizes.
 
 
 
