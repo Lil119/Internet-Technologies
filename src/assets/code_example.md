@@ -315,7 +315,7 @@ export async function GET() {
 
  If you go back to [http://localhost:3000/reviews](http://localhost:3000/reviews), you will noticed the data has not been updated on the page.
 
-
+That is because the data has been stored in cache without any expiration time.
 
 
 
@@ -333,7 +333,8 @@ Example (Dynamic Fetch without Cache):
 ```
 
 In this example, the `cache: 'no-store'` option forces the `fetch` request to be **dynamic**, meaning that data is fetched on **every request**.  
-This is useful when the API data is frequently updated.
+
+This is useful when the API data is frequently updated, or when each response of the API depends on who is asking (authentification for example is a dynamic API).
 
 If you test this code in app/reviews/page.tsx, you will now see the data you modified at [http://localhost:3000/reviews](http://localhost:3000/reviews).
 
@@ -342,6 +343,7 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 
 #### Key Differences Between Static and Dynamic API Fetching in App Router
 
+
 | **Feature**                    | **Static API (SSG)**                                              | **Dynamic API (SSR)**                                                  |
 | ------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | **When Data is Fetched**       | During build time (or with revalidation)                          | On every request                                                       |
@@ -349,6 +351,7 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 | **Fetch Method in App Router** | `fetch('api-url', { next: { revalidate: X } })`                   | `fetch('api-url', { cache: 'no-store' })`                              |
 | **Use Case**                   | Static data that rarely changes (e.g., blog posts, product pages) | Dynamic data that changes frequently (e.g., user dashboard, live data) |
 | **Performance**                | Faster, since pre-rendered at build time                          | Slightly slower, since data is fetched on each request                 |
+
 
 
 
@@ -368,7 +371,7 @@ With this setup, the data will be cached and updated every 60 seconds when a new
 
 ## Optimizing images
 
-Next.js optimizes images through its built-in `next/image` component, which provides several automatic optimizations:
+Next.js also optimizes several components, including images through its built-in `next/image` component, which provides several automatic optimizations:
 
 - **Responsive Images**: Automatically resizes and serves the right image for different devices.
 - **Lazy Loading**: Loads images only when they are about to enter the viewport.
@@ -400,7 +403,13 @@ export default async function Home() {
 
 You can check the results at [http://localhost:3000](http://localhost:3000).
 
+![Star image](/Internet-Technologies/src/assets/images/code_example/star.png)
+
 If you click on the star image, you will be redirected to the list of reviews pages.
 
 
 ## Conclusion
+
+In this tutorial, we've covered the essentials of using Next.js to build a web application. By exploring core features such as simplified routing, dynamic and static data fetching, API creation, and image optimization, you've gained insight into why Next.js can be an amazing framework for modern web development. 
+
+With these tools and techniques, you’re now ready to leverage Next.js’s capabilities to build fast, accessible, and SEO-optimized web applications. Whether creating a blog, an e-commerce site, or a complex interactive platform, Next.js empowers you to deliver a high-quality user experience.
