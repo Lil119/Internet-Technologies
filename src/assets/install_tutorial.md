@@ -105,12 +105,12 @@ Now, let's build our review website !
 
 ## Simplified routing with folders and files
 
-In this tutorial, we will use the App Router because it is the most recent and complete router for Next.js. It offers more features and improvements compared to the older Page Router. However, you might come across older tutorials that still use the Page Router. You can easily recognize them because they have a "pages" folder in their project structure. The App Router, on the other hand, uses an "app" folder to manage routes in a more organized and modern way.
+In this tutorial, we will use the App Router because it is the most recent and complete router for Next.js.  It offers more features and improvements compared to the older Page Router. However, you might come across older tutorials that still use the Page Router.  You can easily recognize them because they have a "pages" folder in their project structure.  The App Router, on the other hand, uses an "app" folder to manage routes in a more organized and modern way.
 
 
 ### Basic routes
 
-In Next.js, routing is simplified using folders and files to structure your app. Each folder corresponds to a route on your website, and files contain the code for your components.
+In Next.js, routing is simplified using folders and files to structure your app.  Each folder corresponds to a route on your website, and files contain the code for your components.
 
 Next.js also introduces several special files that serve specific purposes:
 - **layout**: Shared UI components that are reused across multiple pages.
