@@ -13,6 +13,7 @@ These benefits make Next.js particularly useful for building blogs, websites, e-
 
 In the third part of this tutorial, we’ll build a simple review website to demonstrate some core features of Next.js.
 
+---
 
 # Setting Up a Docker Container with Node.js & TypeScript
 
@@ -55,7 +56,7 @@ The container will now start creating, and after a short wait, it will be up and
 
    ![Docker Container Running](/Internet-Technologies/src/assets/images/docker-container-running.png)
 
-
+---
 
 # Installing Next.js
 
@@ -97,7 +98,7 @@ With the container running, let’s install Next.js:
 
 If you need to stop the server, use CTRL-C.
 
-
+---
 
 # Basic Code Examples
 
@@ -494,6 +495,7 @@ You can check the results at [http://localhost:3000](http://localhost:3000).
 
 If you click on the star image, you will be redirected to the list of reviews pages.
 
+---
 
 # Conclusion
 
