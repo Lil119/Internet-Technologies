@@ -8,13 +8,11 @@ nav {
   width: 100%;
 }
 
-img {
+h2 img {
   width: 800px;
-}
-img + img {
   margin: 1rem 0 2rem 0;
 }
 
 hr {
-  margin: 2rem 0;
+  margin: 3rem 0;
 }
