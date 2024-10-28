@@ -2,6 +2,7 @@
 
 This is an example.
 
+<img src="/src/assets/images/Slide1.PNG" alt="Slide1" width="600" />
 ![Slide1](/src/assets/images/Slide1.PNG)
 Descriptive text here.
 
