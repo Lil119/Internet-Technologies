@@ -10,13 +10,9 @@ nav {
 
 img {
   width: 800px;
-  margin: 20px 0;
-}
-
-h1 {
-  margin: 20px 0;
+  margin: 2rem 0 4rem 0;
 }
 
 hr {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
