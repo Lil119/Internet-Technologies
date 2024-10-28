@@ -12,12 +12,11 @@ body div div {
 
 nav {
   width: 100%;
-  height: min-content;
+  max-height: 40px;
 }
 
 .navbar-nav {
   width: 100%;
-  height: min-content;
 }
 
 .nav-link, .navbar-brand {
