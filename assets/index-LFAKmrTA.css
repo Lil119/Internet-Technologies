@@ -9,15 +9,23 @@ nav {
 }
 
 h2 img {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 0 2rem 0;
-  box-shadow: 0px 2px 2px #000000;
+  box-shadow: 0px 4px 4px #000000;
 }
 
 p img {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 0 2rem 0;
-  box-shadow: 0px 2px 2px #000000;
+  box-shadow: 0px 4px 4px #000000;
+}
+
+h1 {
+  margin: 1rem 0 2rem 0;
+}
+
+h2 {
+  margin: 0.5rem 0 1rem 0;
 }
 
 hr {
