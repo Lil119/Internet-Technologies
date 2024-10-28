@@ -103,7 +103,8 @@ If you need to stop the server, use CTRL-C.
 
 ---
 
-## Now, let's build our review website!
+## Now, let's build our review website!  
+---
 
 ### Simplified routing with folders and files
 
@@ -499,3 +500,4 @@ In this tutorial, we've covered the essentials of using Next.js to build a web a
 
 With these tools and techniques, you’re now ready to leverage Next.js’s capabilities to build fast, accessible, and SEO-optimized web applications. Whether creating a blog, an e-commerce site, or a complex interactive platform, Next.js empowers you to deliver a high-quality user experience.  
 
+---  
