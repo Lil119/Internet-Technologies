@@ -11,3 +11,10 @@ nav {
 img {
   width: 800px;
 }
+img + img {
+  margin: 1rem 0 2rem 0;
+}
+
+hr {
+  margin: 2rem 0;
+}
