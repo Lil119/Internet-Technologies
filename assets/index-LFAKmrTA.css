@@ -12,6 +12,7 @@ body div div {
 
 nav {
   width: 100%;
+  height: min-content;
 }
 
 .navbar-nav {
