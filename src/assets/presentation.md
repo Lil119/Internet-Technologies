@@ -2,53 +2,51 @@
 ---
 
 ![Slide1](src/assets/images/Slide1.PNG)
+---
 
-This is line 1
-This is line 2
-This is line 3  
-This is line 4  
-This is line 5  
+Slide description
 
 ---
 
 ![Slide2](src/assets/images/Slide2.PNG)  
 ---
-This is para 1
 
-This is para 2
-
-This is para 3
-
+Slide description
 
 ---
 
 ![Slide3](src/assets/images/Slide3.PNG)  
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide4](src/assets/images/Slide4.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide5](src/assets/images/Slide5.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide6](src/assets/images/Slide6.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide7](src/assets/images/Slide7.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
@@ -132,48 +130,56 @@ It also functions as a backend by using API routes which allow you to build serv
 
 ![Slide15](src/assets/images/Slide15.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide16](src/assets/images/Slide16.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide17](src/assets/images/Slide17.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide18](src/assets/images/Slide18.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide19](src/assets/images/Slide19.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide20](src/assets/images/Slide20.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide21](src/assets/images/Slide21.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
 
 ![Slide22](src/assets/images/Slide22.PNG)
 ---
-Descriptive text here.
+
+Slide description
 
 ---
