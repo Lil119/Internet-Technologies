@@ -1,6 +1,6 @@
 # Presentation
 
-![Slide1](src/assets/images/Slide1.PNG)
+![Slide1](/Internet-Technologies/src/assets/images/Slide1.PNG)
 Descriptive text here.
 
 ![Slide2](src/assets/images/Slide2.PNG)
