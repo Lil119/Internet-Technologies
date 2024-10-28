@@ -3,6 +3,13 @@
 This is an example.
 
 <img src="/src/assets/images/Slide1.PNG" alt="Slide1" width="600" />
+
+<img src="/src/assets/images/Slide2.PNG" alt="Slide2" width="600" />
+
+<img src="/src/assets/images/Slide3.PNG" alt="Slide3" width="600" />
+
+<img src="/src/assets/images/Slide4.PNG" alt="Slide4" width="600" />
+
 ![Slide1](/src/assets/images/Slide1.PNG)
 Descriptive text here.
 
