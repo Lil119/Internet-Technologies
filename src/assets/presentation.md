@@ -2,25 +2,25 @@
 
 This is an example.
 
-![Slide1](/Internet-Technologies/src/assets/images/Slide1.PNG)
+![Slide1](/src/assets/images/Slide1.PNG)
 Descriptive text here.
 
-![Slide2](/Internet-Technologies/src/assets/images/Slide2.PNG)
+![Slide2](/assets/images/Slide2.PNG)
 Descriptive text here.
 
-![Slide3](/Internet-Technologies/src/assets/images/Slide3.PNG)
+![Slide3](src/assets/images/Slide3.PNG)
 Descriptive text here.
 
-![Slide4](/Internet-Technologies/src/assets/images/Slide4.PNG)
+![Slide4](assets/images/Slide4.PNG)
 Descriptive text here.
 
-![Slide5](/Internet-Technologies/src/assets/images/Slide5.PNG)
+![Slide5](/images/Slide5.PNG)
 Descriptive text here.
 
-![Slide6](/Internet-Technologies/src/assets/images/Slide6.PNG)
+![Slide6](images/Slide6.PNG)
 Descriptive text here.
 
-![Slide7](/Internet-Technologies/src/assets/images/Slide7.PNG)
+![Slide7](Internet-Technologies/src/assets/images/Slide7.PNG)
 Descriptive text here.
 
 ![Slide8](/Internet-Technologies/src/assets/images/Slide8.PNG)
