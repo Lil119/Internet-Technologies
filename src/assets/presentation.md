@@ -1,18 +1,18 @@
 # Presentation
 
-![Slide1](/src/assets/images/Slide1.PNG)
+![Slide1](src/assets/images/Slide1.PNG)
 Descriptive text here.
 
-![Slide2](/src/assets/images/Slide2.PNG)
+![Slide2](src/assets/images/Slide2.PNG)
 Descriptive text here.
 
 ![Slide3](src/assets/images/Slide3.PNG)
 Descriptive text here.
 
-![Slide4](assets/images/Slide4.PNG)
+![Slide4](src/assets/images/Slide4.PNG)
 Descriptive text here.
 
-![Slide5](/images/Slide5.PNG)
+![Slide5](src/assets/images/Slide5.PNG)
 Descriptive text here.
 
 ![Slide6](images/Slide6.PNG)
