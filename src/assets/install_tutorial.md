@@ -1,4 +1,7 @@
-# Introduction
+# Tutorial
+---
+
+## Introduction  
 
 The first part of this tutorial is inspired by Derek Turner’s guide on [installing React](https://derekturner.github.io/IT-docs-24/#/Block_REACT/section_5/reactDevelopment1?id=dockervite-client-side-app), covering the initial setup for a Next.js project in a Docker container with Node.js and TypeScript.
 
@@ -15,7 +18,7 @@ In the third part of this tutorial, we’ll build a simple review website to dem
 
 ---
 
-# Setting Up a Docker Container with Node.js & TypeScript
+## Setting Up a Docker Container with Node.js & TypeScript
 
 To get started, ensure you have both **Node.js** and **Docker** installed, as well as the **Dev Containers** extension in **VSCode**.
 
@@ -58,7 +61,7 @@ The container will now start creating, and after a short wait, it will be up and
 
 ---
 
-# Installing Next.js
+## Installing Next.js
 
 With the container running, let’s install Next.js:
 
@@ -100,14 +103,13 @@ If you need to stop the server, use CTRL-C.
 
 ---
 
-# Basic Code Examples
+## Now, let's build our review website!
 
-Now, let's build our review website !
-
-## Simplified routing with folders and files
+### Simplified routing with folders and files
 
 In this tutorial, we will use the App Router because it is the most recent and complete router for Next.js.  It offers more features and improvements compared to the older Page Router. However, you might come across older tutorials that still use the Page Router.  You can easily recognize them because they have a "pages" folder in their project structure.  The App Router, on the other hand, uses an "app" folder to manage routes in a more organized and modern way.
 
+---
 
 ### Basic routes
 
@@ -127,7 +129,7 @@ Next.js also introduces several special files that serve specific purposes:
 By simply naming a `.tsx` file with one of these predefined names, Next.js automatically assigns its role. This eliminates the need for React Router, simplifying the overall development process.
 
 
-### Example: Creating a New Route
+#### Example: Creating a New Route
 
 To demonstrate, let's create an "About" page in Next.js.
 
@@ -159,7 +161,7 @@ Then, open [http://localhost:3000/about](http://localhost:3000/about) in your br
 
 
 
-### Example: Creating a dynamic route
+#### Example: Creating a dynamic route
 
 Next.js makes it easy to create dynamic routes using bracket notation for folder and file names. Let’s create pages for different reviews.
 
@@ -207,9 +209,7 @@ You can now access [http://localhost:3000/reviews/1](http://localhost:3000/revie
 If you access [http://localhost:3000/reviews/2](http://localhost:3000/reviews/2), it will show "Review 2".
 
 
-
-
-### Example: Having parameters in the URL with **useSearchParams**
+#### Example: Having parameters in the URL with **useSearchParams**
 
 You can also pass multiple parameters through the URL.
 
@@ -252,13 +252,13 @@ In this example:
 - The **Review ID** is retrieved from the URL path.
 - The **Title**, **Description**, and **Stars** are extracted from the query parameters.
 
+---
 
-
-## Simplified API gestion
+### Simplified API
 
 Next.js enables you to build fullstack applications with React, providing tools to easily create APIs.
 
-### Example: Create an API for Reviews
+#### Example: Create an API for Reviews
 
 To create an API endpoint for handling reviews, follow these steps:
 
@@ -296,7 +296,7 @@ This will display the list of reviews as shown below :
 
 ![Api for reviews](/Internet-Technologies/src/assets/images/code_example/api-reviews.png)
 
-### Example : Access an API
+#### Example : Access an API
 
 Now that we have created an API route, the next step is to display the data on our website.
 
@@ -356,8 +356,7 @@ We used the Next.js `Link` component instead of the standard HTML `<a>` tag. Thi
 
 You can click on the link to see the details page of each review.
 
-
-
+---
 
 ### Fetching Data in Next.js App Router
 
@@ -367,6 +366,7 @@ There are two primary ways to fetch data in the **App Router**:
 
 1. **Static Rendering (Static API):** Data fetched during build time using `fetch` with caching.
 2. **Dynamic Rendering (Dynamic API):** Data fetched at runtime using dynamic `fetch`.
+
 
 #### Static Rendering with Static API (Using Cache)
 
@@ -405,8 +405,6 @@ export async function GET() {
 That is because the data has been stored in cache without any expiration time.
 
 
-
-
 #### Dynamic Rendering with Dynamic API (No Cache)
 
 For **dynamic APIs** (where data changes frequently or needs to be fetched on every request), you can explicitly disable caching in the `fetch` call. This ensures that the data is fetched at runtime on each request.
@@ -430,7 +428,6 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 
 #### Key Differences Between Static and Dynamic API Fetching in App Router
 
----
 
 | **Feature**                    | **Static API (SSG)**                                              | **Dynamic API (SSR)**                                                  |
 | ------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
@@ -442,8 +439,7 @@ If you test this code in app/reviews/page.tsx, you will now see the data you mod
 
 ---
 
-
-#### Revalidation (ISR) in App Router
+### Revalidation (ISR) in App Router
 
 If you want to fetch data statically but also periodically revalidate it, you can use **ISR (Incremental Static Regeneration)** in the **App Router**. This allows pages to be regenerated in the background based on a time interval without rebuilding the entire site.
 
@@ -455,9 +451,9 @@ If you want to fetch data statically but also periodically revalidate it, you ca
 
 With this setup, the data will be cached and updated every 60 seconds when a new request comes in, ensuring up-to-date content without fetching on every request.
 
+---
 
-
-## Optimizing images
+### Optimizing images
 
 Next.js also optimizes several components, including images through its built-in `next/image` component, which provides several automatic optimizations:
 
@@ -497,8 +493,9 @@ If you click on the star image, you will be redirected to the list of reviews pa
 
 ---
 
-# Conclusion
+## Conclusion
 
 In this tutorial, we've covered the essentials of using Next.js to build a web application. By exploring core features such as simplified routing, dynamic and static data fetching, API creation, and image optimization, you've gained insight into why Next.js can be an amazing framework for modern web development. 
 
-With these tools and techniques, you’re now ready to leverage Next.js’s capabilities to build fast, accessible, and SEO-optimized web applications. Whether creating a blog, an e-commerce site, or a complex interactive platform, Next.js empowers you to deliver a high-quality user experience.
+With these tools and techniques, you’re now ready to leverage Next.js’s capabilities to build fast, accessible, and SEO-optimized web applications. Whether creating a blog, an e-commerce site, or a complex interactive platform, Next.js empowers you to deliver a high-quality user experience.  
+
