@@ -2,23 +2,27 @@
 
 ![Slide1](src/assets/images/Slide1.PNG)
 ---
-<p>Descriptive text here.</p>
 
 This is line 1
 This is line 2
 This is line 3  
 This is line 4  
-This is line 5
+This is line 5  
 
 ---
 
-![Slide2](src/assets/images/Slide2.PNG)
+![Slide2](src/assets/images/Slide2.PNG)  
 ---
-Descriptive text here.
+This is para 1
+
+This is para 2
+
+This is para 3
+
 
 ---
 
-![Slide3](src/assets/images/Slide3.PNG)
+![Slide3](src/assets/images/Slide3.PNG)  
 ---
 Descriptive text here.
 
