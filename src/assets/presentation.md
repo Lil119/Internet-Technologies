@@ -2,13 +2,13 @@
 
 This is an example.
 
-![Slide1](images/Slide1.PNG)
+![Slide1](/images/Slide1.PNG)
 Descriptive text here.
 
 ![Slide2](images/Slide2.PNG)
 Descriptive text here.
 
-![Slide3](images/Slide3.PNG)
+![Slide3](/images/Slide3.PNG)
 Descriptive text here.
 
 ![Slide4](images/Slide4.PNG)
