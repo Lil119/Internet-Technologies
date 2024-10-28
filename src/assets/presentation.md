@@ -88,7 +88,7 @@ Using SSR, all of this work is done on the server and only the fully rendered pa
 
 ![Slide11](src/assets/images/Slide11.PNG)
 ---
-The posts page also makes a fetch request to the API to get the posts array but instead of returning the entire array, we use the id which was included in the URL to only get the corresponding post.
+The individual post page also makes a fetch request to the API to get the posts array but instead of returning the entire array, we use the id which was included in the URL to only get the corresponding post.
 
 ---
 
