@@ -214,17 +214,8 @@ Next.js also has great documentation and a large community of developers. It is 
 ![Slide20](src/assets/images/Slide20.PNG)
 ---
 
-
 ![Slide21](src/assets/images/Slide21.PNG)
 ---
 
-Slide description
-
----
-
 ![Slide22](src/assets/images/Slide22.PNG)
----
-
-Slide description
-
 ---
