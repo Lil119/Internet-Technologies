@@ -23,7 +23,7 @@ nav {
 
 .nav-link, .navbar-brand {
   min-width: 110px;
-  margin: 0 1rem 0 1rem;
+  margin: 0 1.5em 0 1.5rem;
   display: flex;
   justify-content: center;
 }
