@@ -159,16 +159,15 @@ Many AI platforms are using Next.js to create their web presence and showcase th
 ![Slide19](src/assets/images/Slide19.PNG)
 ---
 
-As with all technologies, Next.js has both benefits and pitfalls and may not be the best solution in every scenario. The main benefits to Next.js 
+As with all technologies, Next.js has both benefits and pitfalls and may not be the best solution in every scenario. The main benefits of using Next.js over React.js are the SEO benefits and the fact that Next.js is a full-stack framework. Next.js also has the capability to implement multiple different page rendering methods, from static server-generated pages to client-rendered pages to partially preloaded pages. 
+
+Next.js also has great documentation and a large community of developers. It is easy to get started with Next.js and explore basic features. However, advanced features can be difficult to understand, and becoming an expert with the framework will require an investment of time and energy. Although Next.js has many great features out-of-the-box, it has poor state management by default, and additional packages will be required to manage state in large applications.
 
 ---
 
 ![Slide20](src/assets/images/Slide20.PNG)
 ---
 
-Slide description
-
----
 
 ![Slide21](src/assets/images/Slide21.PNG)
 ---
