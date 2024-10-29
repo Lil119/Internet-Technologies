@@ -7,12 +7,12 @@
 body div div {
   width: 80%;
   margin: 0 auto auto auto;
+  background-color: white;
+  color: black;
 }
 
 .root {
   height: 100vh;
-  background-color: white;
-  color: black;
 }
 
 nav {
