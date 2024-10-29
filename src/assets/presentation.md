@@ -4,49 +4,95 @@
 ![Slide1](src/assets/images/Slide1.PNG)
 ---
 
-Slide description
+Our presentation covers an overview of next.js, it's key features, examples, how it fits into a full stack system,  
+providing real world use cases, pros and cons, and a brief demonstration.
 
 ---
 
 ![Slide2](src/assets/images/Slide2.PNG)  
 ---
 
-Slide description
+First, we provided an introduction to Next.js, where we discussed what it is and why it's important in modern  
+web development.  
+
+Next, we devlved into the key features that make Next.js a poweful framework, such as server-side rendering,  
+static site generation, and it's unique file-based routing system.  
+
+We then moved onto an example project where we expanded upon some of these key features. For this example, we  
+demostrated the development of a simple blog.  
+
+Following that, we showcased real-world use cases to illustarte how Next.js is being utilisted effectivley in the industry and the benefits it offers in that context.  
+
+We also discussed the pros and cons of Next.js, highlighting its advantages as well as any potenial limitations or  
+challeneges that developers might face.  
+
+Finally, we concluded with a recap of the key points we covered and opened the floor for a Q&A session, where we  
+encouraged viewers to ask any questions you may have about Next.js.
 
 ---
 
 ![Slide3](src/assets/images/Slide3.PNG)  
 ---
 
-Slide description
+Next.js is an open-source framework built on top of React.  
+
+It was developed by Vercel to simplify server-side rendering, static site generation, and other advanced features  
+for React applications.  
+
+With Next.js, developers can achieve better performance and SEO, thanks to features like server-side rendering  
+and th ability to generate static pages.  
+
+It's especially popular for builiding scalable, productions-ready applications with a seamless development  
+experience.
 
 ---
 
 ![Slide4](src/assets/images/Slide4.PNG)
 ---
 
-Slide description
+Next.js offer Server-Side Rendering, or SSR.  
+
+This means pages are rendered on the server before they're sent to the browser, making the site load faster and  
+improving SEO.  
+
+It's useful for dynamic content that needs the stay up-to-date while still loading quickly for users.  
+
+Then there's Static Site Generation or SSG.  
+
+This feature builds static pages ahead of time at compile, so when users visit the site, those pages load almost  
+instantly.  
+
+It's great for content that doesn't change much, like blogs or marketing pages.
 
 ---
 
 ![Slide5](src/assets/images/Slide5.PNG)
 ---
 
-Slide description
+Next.js also next us developers create API Routes directly within the app, so instead of setting up a seperate backend, we can handle requests, like fetching data or submitting forms, right in the Next.js code.  
+
+This simplifies the development process a lot.
 
 ---
 
 ![Slide6](src/assets/images/Slide6.PNG)
 ---
 
-Slide description
+Another standout feature is Built-In Image Optimisation.  
+
+Next.js automatically resizes and optimises images for different screen sizes and formats, like WebP.  
+
+It also lazy loads images, meaning they only load when they're needed, which really helps with performance.
 
 ---
 
 ![Slide7](src/assets/images/Slide7.PNG)
 ---
 
-Slide description
+Finally, Next.js supports Dynamic Routing, which means we can create pages based on any parameter, like user  
+profiles or product pages, without manually setting up each route.  
+
+It keeps navigation efficient, especially in larger apps.
 
 ---
 
