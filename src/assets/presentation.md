@@ -131,35 +131,35 @@ It also functions as a backend by using API routes which allow you to build serv
 ![Slide15](src/assets/images/Slide15.PNG)
 ---
 
-Slide description
+Next.js is a widely used framework built on a massively popular library. Next.js was built on top of the success of React.js, allowing it to be quickly and widely adopted across industries. In the 2024 Stack Overflow Developer survey Next.js was voted 4th most popular web framework/technology (with React.js in 2nd place).
 
 ---
 
 ![Slide16](src/assets/images/Slide16.PNG)
 ---
 
-Slide description
+One major industry which has adopted Next.js is e-commerece. Next.js provides a wide range of out-of-the-box tools, making it a perfect framework for massive international e-commerce companies. The Next.js Image component features built-in image scaling and optimisation, which can greatly improve performance on image-heavy websites - as most e-commerce websites are. Next.js also offers massive SEO improvements over React.js helping companies perform better on Google search rankings and attracting more clicks. Next.js also has built-in features for internationalisation, making it easy for companies which work internationally to adapt currency, time, and text to the users' region.
 
 ---
 
 ![Slide17](src/assets/images/Slide17.PNG)
 ---
 
-Slide description
+Next.js is also the platform of choice for many media and multimedia websites, including STV Player and The Washington Post. These platforms also use many images, using the Next.js Image component. Partial prerendering in Next.js can improve page load times by rendering static or slowly changing pages ahead of time.
 
 ---
 
 ![Slide18](src/assets/images/Slide18.PNG)
 ---
 
-Slide description
+Many AI platforms are using Next.js to create their web presence and showcase their software. This is often because Next.js is easy to scale, allowing SAAS companies who start very small to scale their website rapidly as their business grows. Next.js also provides a good developer experience (especially when used with TypeScript), explaining its high ranking in the 2024 Stack Overflow Developer Survey.  
 
 ---
 
 ![Slide19](src/assets/images/Slide19.PNG)
 ---
 
-Slide description
+As with all technologies, Next.js has both benefits and pitfalls and may not be the best solution in every scenario. The main benefits to Next.js 
 
 ---
 
