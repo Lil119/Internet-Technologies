@@ -21,15 +21,22 @@ nav {
   width: 100%;
 }
 
-.nav-link, .navbar-brand {
+.nav-link {
   min-width: 110px;
   margin: 0 1.5em 0 1.5rem;
   display: flex;
   justify-content: center;
 }
 
+.navbar-brand {
+  min-width: 120px;
+  margin: 0 1.5em 0 2rem;
+  display: flex;
+  justify-content: center;
+}
+
 .navbar-toggler {
-    margin: 0 0 0 2rem;
+    margin: 0 2rem 0 0;
 }
 
 h2 img {
